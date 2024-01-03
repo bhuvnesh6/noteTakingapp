@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+    align-items: center;
+    justify-content: center;
+    color: rgb(188, 188, 188);
+}
+
+body{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(67, 67, 67);
+    padding-top: 20px;
+}
+
+.main{
+    font-size: 20px;
+    height: 92vh;
+    width: 50vw;
+    background-color: rgb(43, 43, 43);
+    border-radius: 8px;
+    box-shadow: 2px 3px 10px black;
+    padding-top:3px ;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar{
+    display: none;
+}
+
+.main header{
+    display:flex;
+    height: 30px;
+    text-align: left;
+    justify-content: space-between;
+    padding:5px 8px;
+    box-shadow: 0 3px 5px -1px black;
+}
+
+
+.main header h2{
+    display: inline-block;
+    text-align: left;
+}
+
+.main header div img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.main h2{
+    margin: 15px;
+}
+
+.main p{
+    margin: 15px;
+}
+
+#date{
+    margin: 15px;
+    color: rgb(107, 107, 107);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.warp{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+}
+.cont {
+    position: absolute;
+    flex-direction: column;
+    padding:  5px 20px;
+    margin: 10px;
+    width: 500px;
+    background-color: #1c1c1ccd;
+    box-shadow: 3px 5px 25px rgba(0, 0, 0, 0.856);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.cont img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.inpdata {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.list {
+    font-size: 30px;
+    width: 450px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 5px 15px;
+    color: rgb(220, 220, 220);
+    background-color: rgb(30, 30, 30);
+    box-shadow: 2px 3px 15px #000000;
+}
+
+.li2 {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(35, 35, 35);
+}
+
+.save {
+    display: block;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 30px;
+    color: #545454;
+    background-color: #1c1c1ccd;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.856);
+    padding: 3px 20px 3px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease .4s;
+}
+
+.save:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+.delete{
+    margin: 15px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #545454;
+    background-color: #0e0e0ecd;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.856);
+    padding: 3px 20px 3px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease .4s;
+}
+
+.can{
+    margin: 15px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #494949;
+    background-color: #e2e2e2cd;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.983);
+    padding: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease .4s;
+}

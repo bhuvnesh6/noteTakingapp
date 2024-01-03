@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your important note</title>
+    <link rel="stylesheet" href="/stylesheets/note.css">
+</head>
+<body>
+    <div class="main">
+       <header>
+        <h2>Your note</h2>
+       <div> <img class="edit" src="/images/edit.svg" alt="">
+        <img src="/images/delete.svg" class="sdel"></div>
+    </header>
+
+    <!--data-->
+    <% const dateOPT = {day:'2-digit', month:'short', year:'numeric'} %>
+    <% const formatedDate = notes.date.toLocaleDateString('en-IN', dateOPT); %>
+    <p id="date">Last edited: <%=formatedDate%></p>
+    <h2><%=notes.title%></h2>
+    <p><%=notes.content%></p>
+    </div>
+
+    <div class="warp"></div>
+    <div class="cont none">
+        <img src="/images/delete.svg" alt="" class="cls">
+        <div class="inpdata">
+            <form action="/editNote" method="post">
+                <input type="text" name="noteId" value="<%=notes._id%>" class="none">
+            <input required type="text" id="list" name="title" class="list" value="<%=notes.title%>">
+            <textarea required name="para" id="note" class="list li2" cols="30" rows="8" value=""><%=notes.content%></textarea>
+            <input type="submit" class="save" value="EDIT NOTE">
+        </form>
+        </div>
+    </div>
+
+    <div class="cont none del">
+            <h2>Do you realy want to delete this note?</h2>
+           <a href="/delete/<%=notes._id%>"><input class="delete" type="submit" value="DELETE">
+           </a>
+            <button type="btn" class="can" value="Cancel">Cancel</button>
+    </div>
+</body>
+<script>
+    let edit = document.querySelector(".edit");
+    let warp = document.querySelector(".warp");
+    let cont = document.querySelector(".cont");
+    let clos = document.querySelector(".cls")
+    edit.addEventListener('click', function(){
+            warp.style.display = "block";
+            cont.style.display = "flex";
+    })
+
+    clos.addEventListener('click', function(){
+        warp.style.display = "none";
+            cont.style.display = "none";
+    })
+    //delete show
+    let sdel =  document.querySelector(".sdel");
+    let del = document.querySelector(".del");
+     let cancle =  document.querySelector('.can')
+    sdel.addEventListener('click', function(){
+        del.classList.remove('none')
+    })
+
+    cancle.addEventListener('click', function(){
+        del.classList.add('none')
+    })
+</script>
+</html>

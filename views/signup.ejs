@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account to save notes</title>
+  <link rel="stylesheet" href="/stylesheets/log.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Make account</h2>
+      <form action="/createuser" method="post">
+        <div class="username" class="form-group">
+          <input type="text" id="username" name="username" placeholder="@USERNAME">
+        </div>
+        <div class="username" class="form-group">
+          <input type="text" id="username" name="name" placeholder="NAME">
+        </div>
+        
+        <div class="username" class="form-group">
+          <input style="display: none;" type="text" id="username" name="secrect" value="chahakotaubadmashkochahahai">
+        </div>
+        <div class="password" class="form-group">
+          <input type="password" id="password" name="password" placeholder="PASSWORD" oninput="pcarCheck()">
+        </div>
+        <button type="submit" id="sbtn" disabled>signup</button>
+        <div class="signup">
+            <p><a href="/auth">have an account? Log in</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+   function pcarCheck() {
+            let inputElement = document.querySelector('#password')
+            let submitBtn = document.querySelector('#sbtn')
+
+            if (inputElement.value.length >= 7) {
+              submitBtn.removeAttribute("disabled");
+            }else {
+                submitBtn.setAttribute("disabled", "true");
+            }
+        }
+ 
+</script>
+</body>
+</html>

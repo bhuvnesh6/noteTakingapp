@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your sreached notes</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        body{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="lip">
+        <% if (DATA.length > 0) { %>
+        <% DATA.forEach(data=>{%>
+            <div>
+                <a href="/ndata/<%=data._id%>">
+                <h2><%=data.title%></h2>
+                <p><%=data.content%></p></a>
+            </div>
+        
+           <%})%>
+
+           <% } else { %>
+            <p style="color: aliceblue;">No results found</p>
+        <% } %>
+         
+      </div> 
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuvnesh raghav's note taking app</title>
+</head>
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+<body>
+   <a href="/"> <header>
+        <h1>Bhuvnesh raghav's note taking app</h1>
+    </header></a>
+    <div class="main">
+        <div class="cont">
+            <div class="inpdata">
+                <form action="/addNotes" method="post">
+                    <input hidden type="text" name="userID" value="<%=UserD._id%>">
+                <input required type="text" id="list" name="title" class="list" placeholder="Write title of note..." oninput="checkCharacterLimit()">
+                <p id="characterCount">max-character: 100</p>
+
+                <textarea required name="para" id="note" class="list li2" cols="30" rows="8" placeholder="Enter your note here..."></textarea>
+                <input type="submit" class="save" value="ADD NOTE">
+            </form>
+            </div>
+           
+        </div>
+
+        <div class="lip">
+       <%UserD.note.forEach(function(data){%>
+        <div>
+            <a href="/ndata/<%=data._id%>">
+            <h2><%=data.title%></h2>
+            <p><%=data.content%></p></a>
+        </div>
+    
+       <%})%>
+           
+        </div>
+    </div>
+
+</body>
+<script>
+     function checkCharacterLimit() {
+            let inputElement = document.getElementById("list");
+            let characterCountElement = document.getElementById("characterCount");
+            
+            let maxLength = 50; 
+
+            let remainingCharacters = maxLength - inputElement.value.length;
+
+            if (remainingCharacters >= 0) {
+                characterCountElement.textContent = "Characters remaining: " + remainingCharacters;
+            } else {
+                // If the limit is exceeded, truncate the input
+                inputElement.value = inputElement.value.slice(0, maxLength);
+            }
+        }
+ 
+</script>
+
+
+</html>

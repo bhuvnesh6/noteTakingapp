@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat:wght@600&display=swap');
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110%;
+  width: 100%;
+}
+
+.login-box {
+  width: 25em;
+  height: 25em;
+  padding: 20px;
+  background-color: #494949;
+  border-radius: 1em;
+  box-shadow: 0 0 5px #181818; 
+  color: #ffffff;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 10%;
+  font-size: 200%;
+  text-shadow: 0 0 5px #cacaca; 
+}
+
+p {
+  margin-top: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 70%;
+  text-shadow: 0 0 5px #cacaca; 
+}
+
+.form-group {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 1em;
+  border: 2px solid #535353;
+}
+
+button {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  max-height: 50px;
+  margin-top: 30px;
+  background-color: #5d5d5d;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 5px #fff; 
+}
+
+button:hover {
+  color: rgb(223, 223, 223);
+  box-shadow: 0 0 5px #fff; 
+  animation: glowing 7s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #fff;
+  }
+  25% {
+    box-shadow: 0 0 5px #276e88;
+  }
+  50% {
+    box-shadow: 0 0 20px #399062;
+  }
+  65% {
+    box-shadow: 0 0 5px #8070bb;
+  }
+  95% {
+    box-shadow: 0 0 5px #bfbfc1;
+  }
+  100% {
+    box-shadow: 0 0 5px #ffffff;
+  }
+}
+
+.username {
+  margin-top: 2%;
+}
+
+
+.email {
+  margin-top: 2%;
+  margin-bottom: 6%;
+}
+
+.password {
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+
+.signup a{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px #cacaca;
+}

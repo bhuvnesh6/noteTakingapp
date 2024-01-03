@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    padding:  5px 20px;
+    margin: 10px;
+    width: 500px;
+    background-color: #000000cd;
+    box-shadow: 3px 5px 25px rgba(0, 0, 0, 0.856);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.inpdata {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.list {
+    font-size: 30px;
+    width: 450px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 5px 15px;
+    color: rgb(220, 220, 220);
+    background-color: rgb(30, 30, 30);
+    box-shadow: 2px 3px 15px #000000;
+}
+
+.li2 {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(35, 35, 35);
+}
+
+.save {
+    display: block;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 30px;
+    color: #545454;
+    background-color: #1c1c1ccd;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.856);
+    padding: 3px 20px 3px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease .4s;
+}
+
+.save:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.lip {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 10px;
+    box-shadow: 2px 3px 15px #868585;
+    width: 50%;
+    text-align: left;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #000000cd;
+    gap: 25px;
+}
+
+
+.lip div {
+    list-style: none;
+    position: relative;
+    width: 250px;
+    max-height:270px ;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(35, 35, 35);
+    font-size: 20px;
+   padding-top: 10px;
+    box-shadow: 2px 3px 15px #0b0b0b;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+
+
+.lip div h2{
+    padding: 10px 7px;
+    color: rgb(220, 220, 220);
+    background-color: rgb(17, 17, 17);
+}
+.lip div p {
+    max-height: 200px;
+    padding: 7px;
+    color: rgb(214, 214, 214);
+    background-color: rgb(35, 35, 35);
+    overflow-y: hidden;
+}
+
+
+
+
+.lip div span {
+    position: relative;
+    left: 800px;
+    height: 40px;
+    display: none;
+    background-color: rgb(255, 63, 63);
+    padding: 5px 15px 5px 15px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 15px black;
+    font-size: bold;
+    color: white;
+    transition: ease .5s;
+    cursor: pointer;
+}
+
+.dot{
+    position: absolute;
+    top:22px;
+    left: 200px;
+}
+
+.dotbtn{
+    position: absolute;
+    top:100px;
+    left: 727px;
+    transition: ease 0.4s;
+    cursor: pointer;
+    opacity: 1;
+    padding: 5px;
+    box-shadow: 1px 3px 15px black;
+    background-color: #545454;
+    gap: 10px;
+}
+
+.dobtns{
+    font-size: 15px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    border: 2px solid rgb(120, 120, 120);
+}
+.dotHover{
+    position: absolute;
+    top:114px;
+    left: 827px;
+    transition: ease 0.4s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#characterCount{
+    color: rgb(214, 214, 214);
+    font-weight: bold;
+}
