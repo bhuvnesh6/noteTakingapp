@@ -1,0 +1,93 @@
+1. GET /signup
+    
+Description: Renders the signup page.
+Usage: Access the signup page.
+Example: GET /signup
+    
+2. GET /auth
+    
+Description: Renders the authentication page.
+Usage: Access the authentication page.
+Example: GET /auth
+    
+3. POST /createuser
+    
+Description: Creates a new user.
+Usage: Submit user registration details to create a new user.
+Parameters:
+name (string): User's name.
+username (string): User's chosen username.
+sec (string): User's secret.
+password (string): User's chosen password.
+Example: POST /createuser
+    
+4. POST /loggin
+    
+Description: Logs in a user.
+Usage: Submit user credentials for authentication.
+Redirects:
+On success: Redirects to the home page ("/").
+On failure: Redirects to the authentication page ("/auth").
+Example: POST /loggin
+    
+5. GET /
+    
+Description: Renders the home page.
+Usage: Access the home page.
+Authentication: Requires user authentication.
+Example: GET /
+    
+6. GET /home
+    
+Description: Renders the index page with user-specific data.
+Usage: Access the index page displaying user data.
+Authentication: Requires user authentication.
+Example: GET /home
+    
+7. POST /addNotes
+    
+Description: Adds a new note for the authenticated user.
+Usage: Submits a new note with title and content.
+Parameters:
+title (string): Title of the note.
+para (string): Content of the note.
+userID (string): ID of the authenticated user.
+Example: POST /addNotes
+    
+8. GET /ndata/:ndataID
+    
+Description: Renders a specific note by its ID.
+Usage: Access a particular note for viewing.
+Parameters:
+ndataID (string): ID of the note to be displayed.
+Authentication: Requires user authentication.
+Example: GET /ndata/123
+    
+9. POST /editNote
+    
+Description: Edits an existing note.
+Usage: Submits edited content for a specific note.
+Parameters:
+noteId (string): ID of the note to be edited.
+title (string): New title for the note.
+para (string): New content for the note.
+Example: POST /editNote
+    
+10. GET /delete/:notID
+    
+Description: Deletes a specific note.
+Usage: Deletes a note by its ID.
+Parameters:
+
+notID (string): ID of the note to be deleted.
+Authentication: Requires user authentication.
+Example: GET /delete/456
+    
+11. POST /search
+    
+Description: Searches for notes based on a given term.
+Usage: Submits a search term to find matching notes.
+Parameters:
+search (string): Search term.
+Authentication: Requires user authentication.
+Example: POST /search
